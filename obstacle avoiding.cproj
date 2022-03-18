@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+    <ProjectGuid>{b993eb16-a12b-48bf-9e7b-725165126470}</ProjectGuid>
+    <avrdevice>ATmega32A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>obstacle avoiding</AssemblyName>
+    <Name>obstacle avoiding</Name>
+    <RootNamespace>obstacle avoiding</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfVersion>3.5.0</AsfVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>False</UsesExternalMakeFile>
+    <ExternalMakeFilePath>C:\Users\Ahmed ALhalawany\Desktop\obstacle avoiding robot\obstacle-avoiding-robot\obstacle avoiding\obstacle avoiding\timer_Driv\timer.h</ExternalMakeFilePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="bit_math.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCD\bitmath.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCD\lcd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCD\lcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="motor_driv\bit_math.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="motor_driv\Motor_Driv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="motor_driv\Motor_Drive.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="motor_driv\STD_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="obstacle avoiding.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="obstacle_avoiding.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="servo\bit_math.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="servo\Servo_Drive.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="servo\servo_drivec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="servo\STD_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="STD_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer\bit_math.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer\STD_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer\timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer\timer_cnfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultrasonic\bit_math.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultrasonic\STD_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultrasonic\UltraSonic_Drive.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultrasonic\UltrSonic_Driv.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="motor_driv" />
+    <Folder Include="LCD" />
+    <Folder Include="timer" />
+    <Folder Include="servo" />
+    <Folder Include="ultrasonic" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
